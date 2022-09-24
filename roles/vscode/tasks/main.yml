@@ -1,0 +1,22 @@
+- block:
+  - name: make config directory
+    file:
+      path: ~/.config/Code/User
+      state: directory
+  - name: basic settings
+    file:
+      src: ~/dotfiles/vscode/settings.json
+      dest: ~/.config/Code/User/settings.json
+      state: link
+      force: yes
+  - name: keybindings
+    file:
+      src: ~/dotfiles/vscode/keybindings.json
+      dest: ~/.config/Code/User/keybindings.json
+      state: link
+      force: yes
+  - name: install extensions
+    shell: "code --install-extension {{ item }}"
+    with_items: '{{ code_extensions }}'
+  tags:
+    - vscode

@@ -1,0 +1,30 @@
+homebrew_taps:
+  - name: homebrew/core
+homebrew_packages:
+  - name: ansible
+  - name: git
+  - name: git-secrets
+  - name: jq
+  - name: wget
+dot_files:
+  - .aliases.bash
+  - .gitconfig
+  - .vimrc
+  # Ubuntu側からdotfilesにpush後有効化
+  # - .bash
+  # - .bashrc
+  # - .bash_profile
+code_extensions:
+  ### Editor
+  - formulahendry.auto-close-tag
+  - MS-CEINTL.vscode-language-pack-ja
+  - oderwat.indent-rainbow
+  - VisualStudioExptTeam.vscodeintellicode
+  - vscode-icons-team.vscode-icons
+  ### Git
+  - eamodio.gitlens
+  - mhutchie.git-graph
+  ### DrawIO
+  - hediet.vscode-drawio
+  ### Vim
+  - vscodevim.vim
