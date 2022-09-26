@@ -4,10 +4,10 @@ apt_packages:
   - name: git-secrets
   - name: jq
 dot_files:
-  - .aliases.bash
   - .gitconfig
   - .vimrc
   # Ubuntu側からdotfilesにpush後有効化
+  # - .aliases.bash
   # - .bash
   # - .bashrc
   # - .bash_profile

@@ -4,15 +4,15 @@
       url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
       dest: "/tmp/chrome.deb"
   - name: install Google Chrome
-    shell: "dpkg -i /tmp/chrome.deb"
+    shell: "sudo dpkg -i /tmp/chrome.deb"
   - name: get VSCode package
     get_url:
       url: "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
       dest: "/tmp/vscode.deb"
   - name: install VSCode
-    shell: "dpkg -i /tmp/vscode.deb"
+    shell: "sudo dpkg -i /tmp/vscode.deb"
   - name: setup GUI settings
     shell: "bash ./roles/gui/settings.sh"
-    when: lookup('env', 'GITHUB_ACTIONS') == ''
+    when: lookup('env', 'GITHUB_ACTIONS') != 'true'
   tags:
     - gui
