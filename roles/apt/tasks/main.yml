@@ -1,0 +1,10 @@
+- block:
+  - name: apt install 
+    ansible.builtin.apt:
+      name: '{{ item.name }}'
+      state: '{{ item.state | default("present") }}'
+      update_cache: yes
+      force: yes
+    with_items: '{{ apt_packages }}'
+  tags:
+    - apt

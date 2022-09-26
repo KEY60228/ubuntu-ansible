@@ -1,9 +1,10 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  become: no
+  become: true
+  become_method: sudo
   roles:
-    - homebrew
+    - apt
     - gui
     - dotfiles
     - vscode

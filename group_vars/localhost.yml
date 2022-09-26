@@ -1,11 +1,8 @@
-homebrew_taps:
-  - name: homebrew/core
-homebrew_packages:
+apt_packages:
   - name: ansible
   - name: git
   - name: git-secrets
   - name: jq
-  - name: wget
 dot_files:
   - .aliases.bash
   - .gitconfig
