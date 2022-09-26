@@ -11,5 +11,8 @@
       dest: "/tmp/vscode.deb"
   - name: install VSCode
     shell: "sudo dpkg -i /tmp/vscode.deb"
+  - name: setup GUI settings
+    shell: "sudo bash ./roles/gui/settings.sh"
+    when: lookup('env', 'GITHUB_ACTIONS') == ''
   tags:
     - gui
